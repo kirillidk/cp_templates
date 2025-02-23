@@ -13,8 +13,13 @@ typedef vector<ll> vll;
 typedef vector<pll> vpll;
 typedef vector<vll> vvll;
 
+template <typename... Args>
+void print(const Args&... args) {
+    ((cout << args << space), ...);
+}
+
 template <typename T>
-void print_single(T& arr) {
+void print(const T& arr) {
     for (const auto& el : arr) {
         cout << el << space;
     }
@@ -22,7 +27,7 @@ void print_single(T& arr) {
 }
 
 template <typename T>
-void print_pair(T& arr) {
+void print_pair(const T& arr) {
     for (const auto& el : arr) {
         cout << el.first << space << el.second << endl;
     }
